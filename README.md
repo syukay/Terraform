@@ -1,4 +1,4 @@
-06-resources/networking.tf
+### 06-resources/networking.tf
 
 ```
 locals {
@@ -18,7 +18,7 @@ resource "aws_vpc" "main" {
 }
 ```
 
-08-input-vars-locals-outputs/variables.tf 
+### 08-input-vars-locals-outputs/variables.tf 
 
 ```
 variable "ec2_instance_type" {
@@ -51,9 +51,9 @@ variable "additional_tags" {
 }
 ```
 
-variable Precedence Order
+#### variable Precedence Order
 
-# TF_VAR instance_type = "t3.micro"
-# terraform.tfvars     = "t3.small"
-# prod.auto.tfvars     = "t3.large"
-# -var and -var-file cli arguments, latest with highest precedence = "t3.xlarge"
+TF_VAR instance_type = "t3.micro"
+terraform.tfvars     = "t3.small"
+prod.auto.tfvars     = "t3.large"
+-var and -var-file cli arguments, latest with highest precedence = "t3.xlarge"
