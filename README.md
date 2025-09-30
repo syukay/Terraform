@@ -23,11 +23,10 @@ resource "aws_vpc" "main" {
 ```
 variable "ec2_instance_type" {
     type = string
-    # default = "t2.micro"
     description = "The type of managed EC2 instances."
 
     validation {
-      condition = var.ec2_instance_type == "t2.micro" || var.ec2_instance_type == "t3.micro"
+      condition = contains(["t2.micro","t3.micro"],var.ec2_instance_type) 
       error_message = "Only supports t2.micro and t3.micro"
     }
 
