@@ -1,0 +1,4 @@
+# For illustration purposes, not actively use  
+    bucket = "terraform-course-syukay-remote-backend"
+    key    = "04-backends/prod/state.tfstate"
+    region = "ap-southeast-2"
